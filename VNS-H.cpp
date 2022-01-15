@@ -1329,7 +1329,7 @@ bool InitialSolution(){
 string instance;
 void main()
 {
-	fstream fl("instances_liste_large.txt", ios::in);
+	fstream fl("instances_liste.txt", ios::in);
 	if(!fl)
         printf("Error opening file instances_liste.txt...\n");
 	
@@ -1337,8 +1337,8 @@ void main()
 	while(!fl.eof())
 	{
 		fl>>instance;
-		lecture_data_center("all_instances_large/data_center_"+instance);
-		lecture_requette("all_instances_large/"+instance);
+		lecture_data_center("all_instance/data_center_"+instance);
+		lecture_requette("all_instances/"+instance);
 		
 		for(int run=1;run<=5;run++){
 
@@ -1416,7 +1416,7 @@ void main()
 			}//embed==true
 		}//end run
 		printf("-------------------------------------------------------------\n");
-	}//fin instances
+	}//end instances
 
 	fl.close();
 	system("pause");	
