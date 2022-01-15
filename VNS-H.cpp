@@ -387,7 +387,7 @@ void init_recherche(){
 void lecture_data_center(string fichier){
 		
 	fstream fdc(fichier, ios::in);
-	if(!fdc) {printf("Erreur d'ouverture du fichier Data_center.txt...\n");Np=0;system("pause");}
+	if(!fdc) printf("Error opening Data_center.txt file...\n");
 	else{	
 	fdc >> Np;
 	
@@ -404,7 +404,7 @@ void lecture_data_center(string fichier){
 void lecture_requette(string fichier){
 	
 	fstream fr(fichier, ios::in);
-	if(!fr){ printf("Erreur d'ouverture du fichier %s.txt...\n",fichier); Nv=0;}
+	if(!fr) printf("Error opening %s.txt file...\n",fichier);
 	else{
 	fr>>Nv;
 
